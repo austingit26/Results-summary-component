@@ -1,0 +1,193 @@
+@use './custom' as *;
+
+
+
+.container{
+    width: 75%;
+
+    @include media-breakpoint-down(md){
+        width: 90%;
+        padding: 0;
+    }
+
+    @include media-breakpoint-down(sm){
+        width: 100%;
+    }
+
+    .row{
+        font-family: 'Hanken Grotesk', sans-serif;
+        margin-top: 5%;
+        width: 75%;
+
+        @include media-breakpoint-down(lg){
+            width: 100%;
+
+        }
+
+        @include media-breakpoint-down(md){
+            margin-top: 0%;
+            width: 90%;
+        }
+
+        @include media-breakpoint-down(sm){
+            width: 100%;
+        }
+
+        .main{
+            height: 100%;
+            @include gradient1;
+            color: $white !important;
+            border-radius: 5%;
+            
+            @include media-breakpoint-down(sm){
+                border-radius: 10%;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                
+            }
+                .circle{
+                    width: 200px;
+                    height: 200px;
+                    padding: 50px;
+                    @include gradient2;
+                    border-radius: 50%;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 15%);
+                    
+                    @include media-breakpoint-down(sm){
+                        width: 150px;
+                        height: 150px;
+                        padding: 20px;
+                    }
+
+                    h1{
+                        font-size: 4rem;
+                        font-weight: 800;
+                    }
+    
+                    h6{ 
+                        font-size: 1rem;
+                        opacity: .70;
+                        @include media-breakpoint-down(sm){
+                            font-size: .95rem;
+                        }
+                    }
+                }
+                
+                h5{ 
+                    opacity: .80;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+
+                h3{
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+
+                p{
+                    font-weight: 500;
+                    font-size: 18px;
+                    padding: 5%;
+                    opacity: .60;
+
+                    @include media-breakpoint-down(md){
+                        margin: 0 5%;
+                        padding: 0;
+                    }
+                }
+            
+        }
+    }
+}
+
+.submain{
+    h5{
+        color: rgba($blue-900, .9);
+        font-weight: 700;
+        opacity: 100;
+        font-size: 1.7rem;
+    }
+
+    button{
+        background-color: hsl(224, 30%, 27%);
+        border: none;
+        font-weight: 700;
+        font-size: 1.2rem;
+
+        &:hover{
+            @include gradient1;
+        }
+    }
+    .output{
+        
+        .Reaction{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800;
+            background-color: hsla(0, 100%, 67%, .1);
+            min-width: 258px;
+            
+            span.title{
+                margin-left: -40%;
+                color: hsl(0, 100%, 67%);
+            }
+            span.total{
+                color: hsla(224, 30%, 27%, .5);
+            }
+        }
+    
+        .Memory{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800;
+            background-color: hsla(39, 100%, 56%, .1);
+            min-width: 258px;
+            
+            span.title{
+                margin-left: -40%;
+                color: hsl(39, 100%, 56%);
+            }
+            span.total{
+                color: hsla(224, 30%, 27%, .5);
+            }
+        }
+    
+        .Verbal{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800;
+            background-color: hsla(166, 100%, 37%, .1);
+            min-width: 258px;
+            
+            span.title{
+                margin-left: -40%;
+                color: hsl(166, 100%, 37%);
+            }
+            span.total{
+                color: hsla(224, 30%, 27%, .5)
+            }
+        }
+    
+        .Visual{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800;
+            background-color: hsla(234, 85%, 45%, .1);
+            min-width: 258px;
+    
+            span.title{
+                margin-left: -40%;
+                color: hsl(234, 85%, 45%);
+            }
+            span.total{
+                color: hsla(224, 30%, 27%, .5);
+            }
+        }
+    }
+
+}
+
+
